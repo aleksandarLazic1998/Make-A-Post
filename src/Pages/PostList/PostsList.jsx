@@ -4,9 +4,9 @@ import PostComponent from "../../components/PostComponent/PostComponent";
 const dummyData = [
 	{
 		id: 1,
-		author: "Aleksandar",
-		title: "This is A first Post",
-		body: "This is the body of this first post and it have soem text in it",
+		author: "Joka Lazic",
+		title: "Ovo je jokina price",
+		body: "Danas je mnogo vruc dan i bilo je lepo Arandjelovcu",
 	},
 	{
 		id: 2,
@@ -16,9 +16,9 @@ const dummyData = [
 	},
 	{
 		id: 3,
-		author: "Saban Saulic",
-		title: "This is A Third Post",
-		body: "This is the body of this Third post and it have soem text in it",
+		author: "ACA Lazic",
+		title: "Mnogo mi je smor",
+		body: "Mnogo mi je smor a ja moram da ucim...",
 	},
 ];
 

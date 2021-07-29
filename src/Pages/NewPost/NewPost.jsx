@@ -1,9 +1,11 @@
 import React from "react";
+import NewPostForm from "../../components/NewPostForm/NewPostForm";
 
 const NewPost = () => {
 	return (
 		<div>
-			<h1>This is a new Post Component</h1>
+			<h1>Add Post 🖋️</h1>
+			<NewPostForm />
 		</div>
 	);
 };
