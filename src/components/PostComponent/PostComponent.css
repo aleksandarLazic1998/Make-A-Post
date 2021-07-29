@@ -1,8 +1,8 @@
 .post_component {
   background-color: #1a1a1d;
   margin-bottom: 20px;
-  padding: 15px;
-  width: 400px;
+  padding: 20px;
+  width: 500px;
   border-radius: 10px;
   color: white;
 }
@@ -21,7 +21,7 @@
   color: white;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   .post_component {
     width: 300px;
   }

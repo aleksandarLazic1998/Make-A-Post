@@ -49,6 +49,9 @@
 @media screen and (max-width: 550px) {
   .new_post_card {
     padding: 20px;
-    width: 90%;
+  }
+
+  .new_post_form input {
+    width: 200px;
   }
 }
