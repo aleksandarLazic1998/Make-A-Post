@@ -1,10 +1,11 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
-import NewPost from "./components/NewPost/NewPost";
-import PostsList from "./components/PostList/PostsList";
+import NewPost from "./Pages/NewPost/NewPost";
+import PostDetail from "./Pages/PostDetail/PostDetail";
+import PostsList from "./Pages/PostList/PostsList";
 import ErrorPage from "./components/UI/ErrorPage";
 
-function App() {
+const App = () => {
 	return (
 		<div>
 			<Header />
@@ -18,7 +19,9 @@ function App() {
 					<PostsList />
 				</Route>
 				{/* Route For Post In Details */}
-				<Route path='/posts/:postId'></Route>
+				<Route path='/posts/:postId'>
+					<PostDetail />
+				</Route>
 				{/* Route For ENtering New Post */}
 				<Route path='/new-post'>
 					<NewPost />
@@ -30,6 +33,6 @@ function App() {
 			</Switch>
 		</div>
 	);
-}
+};
 
 export default App;
