@@ -45,3 +45,10 @@
 .new_post_card button:hover {
   transform: scale(110%);
 }
+
+@media screen and (max-width: 550px) {
+  .new_post_card {
+    padding: 20px;
+    width: 90%;
+  }
+}

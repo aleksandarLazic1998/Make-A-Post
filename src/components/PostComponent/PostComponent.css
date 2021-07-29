@@ -1,0 +1,28 @@
+.post_component {
+  background-color: #1a1a1d;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 400px;
+  border-radius: 10px;
+  color: white;
+}
+.post_component h2 {
+  margin-bottom: 10px;
+}
+.post_component h3 {
+  margin-bottom: 20px;
+}
+
+.post_component a {
+  text-decoration: none;
+  color: #6f2232;
+}
+.post_component a:hover {
+  color: white;
+}
+
+@media screen and (max-width: 420px) {
+  .post_component {
+    width: 300px;
+  }
+}
