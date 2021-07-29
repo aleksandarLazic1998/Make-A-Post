@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
 	return (
 		<nav>
-			<Link to='/posts'>Posts</Link>
-			<Link to='/new-posts'>New Post</Link>
+			<ul>
+				<li>
+					<Link to='/posts'>Posts</Link>
+				</li>
+				<li>
+					<Link to='/new-post'>New Post</Link>
+				</li>
+			</ul>
 		</nav>
 	);
 };
