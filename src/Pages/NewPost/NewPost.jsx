@@ -5,6 +5,7 @@ const NewPost = () => {
 	return (
 		<div>
 			<h1>Add Post 🖋️</h1>
+			
 			<NewPostForm />
 		</div>
 	);
