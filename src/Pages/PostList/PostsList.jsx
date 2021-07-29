@@ -1,5 +1,7 @@
 import React from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import PostComponent from "../../components/PostComponent/PostComponent";
+import sortPosts from "../../shared/sort";
 
 const dummyData = [
 	{
@@ -23,11 +25,28 @@ const dummyData = [
 ];
 
 const PostsList = () => {
+	const location = useLocation();
+	const history = useHistory();
+
+	// This will return object where {sort: "asc"}
+	const postParams = new URLSearchParams(location.search);
+
+	// Check if URLSearchParams will return true
+	const isSortingAsc = postParams.get("sort") === "asc";
+
+	// Sort Posts based on sortPosts method
+	const sortedItems = sortPosts(dummyData, isSortingAsc);
+
+	const handleSort = () => {
+		history.push(`/posts?sort=${isSortingAsc ? "desc" : "asc"}`);
+	};
+
 	return (
 		<div>
+			<button onClick={handleSort}>Sort {isSortingAsc ? "Z-A" : "A-Z"}</button>
 			<h1>List of Posts</h1>
 			<ul>
-				{dummyData.map((post) => {
+				{sortedItems.map((post) => {
 					return <PostComponent key={post.id} {...post} />;
 				})}
 			</ul>
