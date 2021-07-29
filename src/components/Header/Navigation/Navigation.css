@@ -1,0 +1,23 @@
+.navigation ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.navigation_link {
+  text-decoration: none;
+  padding: 10px;
+  color: #4e4e50;
+  font-size: large;
+}
+
+.navigation ul li {
+  display: block;
+
+  margin: 0px 20px;
+}
+
+.navigation ul li :hover {
+  background-color: #6f2232;
+  color: white;
+}
