@@ -1,0 +1,27 @@
+.post_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  background-color: #6f2232;
+}
+
+.post_detail_card {
+  background-color: #1a1a1d;
+  padding: 50px;
+  border-radius: 10px;
+  color: white;
+}
+
+.post_detail_card h1,
+p {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 550px) {
+  .post_detail_card {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
