@@ -1,29 +1,30 @@
 .post_list {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  min-height: calc(100vh - 100px);
-  background-color: #6f2232;
-  padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	min-height: calc(100vh - 100px);
+	background-color: #a1c4ba;
+	color: #001e1d;
+	padding-top: 30px;
 }
 .post_list button {
-  margin-bottom: 10px;
-  height: 30px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: 0;
-  cursor: pointer;
+	margin-bottom: 10px;
+	height: 30px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e8e4e6;
+	border: 0;
+	cursor: pointer;
 }
 
 .post_list button:hover {
-  transform: scale(105%);
+	transform: scale(105%);
 }
 
 .post_list h1 {
-  color: white;
-  margin-bottom: 20px;
+	color: #001e1d;
+	margin-bottom: 20px;
 }
