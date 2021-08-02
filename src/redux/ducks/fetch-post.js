@@ -75,9 +75,51 @@ export const fetchGetData = () => {
 				"https://react-http-7806d-default-rtdb.europe-west1.firebasedatabase.app/postsList.json"
 			);
 			const data = await response.json();
-			dispatch(fetchDataSuccess(data));
+
+			const loadedPosts = [];
+
+			for (const key in data) {
+				loadedPosts.push({
+					id: key,
+					title: data[key].title,
+					body: data[key].body,
+					author: data[key].author,
+				});
+			}
+
+			dispatch(fetchDataSuccess(loadedPosts));
 		} catch (error) {
 			dispatch(fetchDataFailure(error));
+		}
+	};
+};
+
+// Redux Thunk Post Data Action
+export const fetchPostData = (postItem, history) => {
+	return async (dispatch) => {
+		dispatch(fetchData());
+		try {
+			const response = await fetch(
+				"https://react-http-7806d-default-rtdb.europe-west1.firebasedatabase.app/postsList.json",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(postItem),
+				}
+			);
+
+			if (!response.ok) {
+				throw new Error("Oops Something Went Wrong...");
+			}
+			// For now do nothing
+			const data = await response.json();
+
+			// When The Data is Updated Successfuly Go to Home Page
+			history.push("/");
+		} catch (error) {
+			console.log(error);
 		}
 	};
 };
