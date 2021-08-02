@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useHistory, Prompt } from "react-router";
+import { Prompt } from "react-router";
 import "./NewPostForm.css";
 
 const NewPostForm = (props) => {
