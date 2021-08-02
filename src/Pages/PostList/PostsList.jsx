@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory, useLocation } from "react-router-dom";
 import PostComponent from "../../components/PostComponent/PostComponent";
 import { fetchGetData } from "../../redux/ducks/fetch-post";
 import "./PostList.css";
