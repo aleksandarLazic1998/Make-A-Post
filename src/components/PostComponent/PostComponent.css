@@ -1,0 +1,37 @@
+.post_component {
+	background-color: #004643;
+	margin-bottom: 20px;
+	padding: 20px;
+	width: 500px;
+
+	color: white;
+}
+
+.post_component:nth-child(even) {
+	border-radius: 0px 20px;
+}
+
+.post_component h2 {
+	margin-bottom: 10px;
+}
+.post_component h3 {
+	margin-bottom: 20px;
+}
+.post_component a {
+	text-decoration: none;
+	background-color: #f9bc60;
+	color: #001e1d;
+  font-weight: 700;
+	padding: 0.5rem;
+	text-decoration: none;
+	border-radius: 20px 20px;
+}
+.post_component a:hover {
+	color: white;
+}
+
+@media screen and (max-width: 550px) {
+	.post_component {
+		width: 300px;
+	}
+}
