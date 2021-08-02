@@ -1,14 +1,21 @@
-import React from 'react';
-import NewPostForm from '../../components/NewPostForm/NewPostForm';
+import React from "react";
+import { useDispatch } from "react-redux";
+import NewPostForm from "../../components/NewPostForm/NewPostForm";
+import { fetchPostData } from "../../redux/ducks/postData";
 
 const NewPost = () => {
-  return (
-    <div>
-      {/* <h1>Add Post 🖋️</h1> */}
+	const dispatch = useDispatch();
 
-      <NewPostForm />
-    </div>
-  );
+	const onSubmitPost = (postSubmited) => {
+		dispatch(fetchPostData(postSubmited));
+	};
+
+
+	return (
+		<div>
+			<NewPostForm onSubmitPost={onSubmitPost} />
+		</div>
+	);
 };
 
 export default NewPost;
